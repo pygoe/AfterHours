@@ -1,0 +1,31 @@
+AFTER HOURS: INDUSTRY & MOTION
+By After Hours Project
+0.4.2 — experimental co-op test release
+
+Upgrade your production and your commute. Adds a separate Chemistry Station Mk II and Lab Oven Mk II at Oscar's Store, plus Circuit, an electric skateboard at Skateboard Shack.
+
+DEFAULTS
+Chemistry: two-hour batches, two liquid outputs, one higher quality tier (up to Heavenly), automatic empty-container disposal.
+Oven: one-hour batches, 20 meth per liquid, preserves quality.
+Circuit: 44.8 km/h, electric acceleration, strong handling/brakes, boosted jump, terrain-slowdown bypass and clearance-checked small-curb assistance.
+Each upgrade costs $3,000. Existing equipment keeps its normal behavior.
+
+CUSTOMIZE
+Optional Mod Manager & Phone App integration exposes cook times, yield, grade, worker speed, prices, trash disposal and board movement. Changes apply live; active batches may be affected. Full output must fit. In co-op the host controls gameplay values; client preferences are restored on leaving.
+
+REQUIREMENTS
+Schedule I 0.4.7f12 on the default IL2CPP branch, MelonLoader 0.7.3. This build does not support the Mono branch. Mod Manager & Phone App is optional for the phone interface. No S1API or networking-helper dependency is required by After Hours itself.
+
+CO-OP STATUS
+Experimental. All players need the exact same DLL and game build. Includes settings sync, build checks and diagnostic logs. Single-player startup and in-memory serializers have been checked, but a complete two-player test has NOT yet been completed. Use a backed-up test save. See COOP-TEST.md before describing it as tested multiplayer support.
+
+INSTALL
+Exit the game. Extract the runtime ZIP into the game folder so AfterHours.dll is inside Mods. When upgrading from an older preview, remove ChemistryStationMkII.dll first. Keep only AfterHours.dll. Do not put source files in Mods.
+
+UNINSTALL
+Finish batches, dismount, save and quit. Remove the DLL on every peer. Equipment has native fallback IDs, but saving without the mod can permanently discard upgrade markers. Keep a backup if you plan to reinstall.
+
+BUG REPORTS
+Enable detailed logging, reproduce once, then create a support report in the mod's phone settings. Send that report plus MelonLoader/Latest.log from host and client, and reproduction steps. Review raw logs for personal details. Nothing uploads automatically.
+
+See README.md, SUPPORT.md, VERIFICATION.txt and COOP-TEST.md in the package. Source is included as a separate download. This project is not affiliated with the game's developers.

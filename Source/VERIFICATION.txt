@@ -1,0 +1,45 @@
+AFTER HOURS: INDUSTRY & MOTION - 0.4.2 CO-OP TEST RELEASE
+Public author: After Hours Project
+Target: Schedule I 0.4.7f12, IL2CPP / MelonLoader 0.7.3
+
+FILE CHECKSUM (SHA-256):
+C674D89E728158C5232FB7C396D12C0B97FFF0307F219B917736B1613DDC0CA2
+This is a fingerprint of the DLL, not encryption, a password or a secret.
+It identifies the exact build. All co-op players must use the same DLL.
+
+VERIFIED
+- Final source builds with zero compiler warnings/errors. Original Circuit mesh still passes all geometry checks.
+- 112 automated checks pass. These include original save compatibility,
+  yield/quality isolation, all 1,440 supported cook durations for both recipe
+  lengths, fractional time skips, range/NaN validation and malformed packets.
+- Live 0.4.0 candidate launch: MelonLoader loaded After Hours; all three native
+  item/inventory save checks passed; board physics isolation check passed.
+- Live candidate: custom FishNet serializer round-trip self-check passed in
+  memory. This check does not send packets or prove a two-player connection.
+- Live candidate: saved benches loaded with their upgraded finishes; chemistry
+  completion logged two Heavenly liquids; Circuit visual applied on mounting.
+- Phone Mod Manager initialization completed without an After Hours error.
+  Tester confirmed the mod menu looks refined; report action remains unverified.
+- Final DLL removes personal build paths and uses neutral product/author
+  metadata. Version 0.4.1 also detaches original board visual meshes per instance
+  to prevent the golden model overlapping Circuit. The rebuilt file has
+  a new checksum and must be installed on ALL peers for a shared test.
+- Version 0.4.2 renames the DLL to AfterHours.dll. Save IDs and gameplay logic are unchanged.
+- Runtime package contains only this mod's DLL and public docs/helper script.
+  Source package contains source, original/custom assets and tests; no game
+  assemblies, private saves, raw logs, dependencies or user build caches.
+
+NOT VERIFIED
+- Actual two-player transport, late join, settings changes between peers,
+  worker/manual production, time skips, ownership and disconnect recovery.
+- Full visual/placement/curb matrix, remote board appearance and other mods.
+- Phone preference persistence across restart and generated support
+  report action remain to be checked. The 0.4.1 board-overlap fix needs visual confirmation.
+- Actual Heavenly sale/dealer payment outcome in gameplay.
+- Vortex installation. The documented manual Mods-folder layout is provided.
+
+See COOP-TEST.md before promoting this experimental release as tested co-op.
+No Nexus upload has been performed.
+
+
+

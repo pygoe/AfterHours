@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>AfterHours</AssemblyName>
+    <Version>0.4.2</Version>
+    <Authors>After Hours Project</Authors>
+    <Product>After Hours: Industry &amp; Motion</Product>
+    <PathMap>$(MSBuildProjectDirectory)=/_/AfterHours</PathMap>
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Schedule I</GameDir>
+    <Interop>$(GameDir)\MelonLoader\Il2CppAssemblies</Interop>
+    <Loader>$(GameDir)\MelonLoader\net6</Loader>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\*.cs" />
+    <EmbeddedResource Include="assets\electric-board.json" />
+    <EmbeddedResource Include="assets\*.png" />
+    <Reference Include="$(Interop)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(Interop)\Il2CppScheduleOne.Core.dll" Private="false" />
+    <Reference Include="$(Interop)\Il2CppFishNet.Runtime.dll" Private="false" />
+    <Reference Include="$(Interop)\Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="$(Interop)\UnityEngine.*.dll" Private="false" />
+    <Reference Include="$(Interop)\Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="$(Loader)\MelonLoader.dll" Private="false" />
+    <Reference Include="$(Loader)\0Harmony.dll" Private="false" />
+    <Reference Include="$(Loader)\Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(Loader)\Newtonsoft.Json.dll" Private="false" />
+  </ItemGroup>
+</Project>
